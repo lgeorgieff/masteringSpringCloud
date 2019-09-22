@@ -1,0 +1,18 @@
+# VM Options: -Dspring.profiles.active=prod
+spring:
+  application:
+    name: person-service-prod
+  data:
+    mongodb:
+      host: localhost
+      pot: 27017
+      # docker run -p 27017:27017 -e MONGO_INITDB_ROOT_USERNAME=admin \
+      #            -e MONGO_INITDB_ROOT_PASSWORD=admin mongo
+      # mongo --username admin --password admin
+      # > use microservices
+      # > db.createUser({user: "micro", pwd: "secret", roles: ["dbOwner"]})
+      username: micro
+      password: secret
+  autoconfigure:
+    exclude:
+      org.springframework.boot.autoconfigure.mongo.embedded.EmbeddedMongoAutoConf
