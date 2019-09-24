@@ -2,6 +2,7 @@ package com.example.person.controller;
 
 import com.example.person.data.PersonRepository;
 import com.example.person.model.Person;
+import javax.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -47,12 +48,12 @@ public class PersonController {
 
   @PostMapping
   @ResponseStatus(HttpStatus.CREATED)
-  public Mono<Person> add(@RequestBody Person person) {
+  public Mono<Person> add(@Valid @RequestBody Person person) {
     return mPersonRepository.save(person);
   }
 
   @PutMapping("/{id}")
-  public Mono<ResponseEntity<Person>> update(@PathVariable String id, @RequestBody Person person) {
+  public Mono<ResponseEntity<Person>> update(@PathVariable String id, @Valid @RequestBody Person person) {
     person.setId(id);
     return mPersonRepository.existsById(id)
         .flatMap(exists -> exists ? mPersonRepository.save(person) : Mono.empty())
