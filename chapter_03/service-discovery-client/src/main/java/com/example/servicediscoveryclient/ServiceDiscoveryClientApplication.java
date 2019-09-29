@@ -9,5 +9,4 @@ public class ServiceDiscoveryClientApplication {
 	public static void main(String[] args) {
 		SpringApplication.run(ServiceDiscoveryClientApplication.class, args);
 	}
-
 }

@@ -2,9 +2,13 @@ server:
   port: ${PORT:8761}
 eureka:
   client:
-    register-with-eureka: false
-    fetch-registry: false
+    registerWithEureka: false
+    fetchRegistry: false
 
 spring:
   application:
     name: service-discovery-server
+  security:
+    user:
+      name: admin
+      password: secret
