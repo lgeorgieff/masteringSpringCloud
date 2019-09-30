@@ -1,0 +1,14 @@
+spring:
+  application:
+    name: discovery-service
+  cloud:
+    config:
+      server:
+        native:
+          searchLocations: classpath:/client_configs
+  profiles:
+    active:
+      - native
+
+server:
+  port: 8888
