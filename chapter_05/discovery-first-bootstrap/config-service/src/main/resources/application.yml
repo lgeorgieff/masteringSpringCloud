@@ -10,6 +10,10 @@ spring:
         native:
           search-locations:
             - classpath:/config-repository
+  security:
+    user:
+      name: discovery
+      password: discovery
 
 eureka:
   client:
