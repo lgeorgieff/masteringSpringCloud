@@ -1,2 +1,2 @@
 echoService:
-  prefix: echo-prod
+  prefix: "[echo-prod] "

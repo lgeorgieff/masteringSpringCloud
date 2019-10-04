@@ -1,15 +1,14 @@
 spring:
   application:
     name: config-service
-  profiles:
-    active:
-      - native
   cloud:
     config:
       server:
-        native:
-          search-locations:
-            - classpath:/config-repository
+        git:
+          uri: https://github.com/lgeorgieff/masteringSpringCloud.git
+          search-paths:
+            - chapter_05/config-repo
+
   security:
     user:
       name: discovery

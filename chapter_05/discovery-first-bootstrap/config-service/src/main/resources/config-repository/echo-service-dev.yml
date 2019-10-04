@@ -1,2 +1,2 @@
 echoService:
-  prefix: echo-dev
+  prefix: "[echo-dev] "
