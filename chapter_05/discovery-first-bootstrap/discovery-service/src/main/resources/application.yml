@@ -1,0 +1,14 @@
+server:
+  port: ${PORT:8761}
+eureka:
+  client:
+    registerWithEureka: false
+    fetchRegistry: false
+
+spring:
+  application:
+    name: discovery-service
+  security:
+    user:
+      name: eureka
+      password: eureka

@@ -1,0 +1,5 @@
+echoService:
+  prefix: "[echo] "
+
+server:
+  port: 8084
