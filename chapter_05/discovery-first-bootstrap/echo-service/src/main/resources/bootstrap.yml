@@ -1,6 +1,9 @@
 spring:
   application:
     name: echo-service
+  profiles:
+    active:
+      - dev
   cloud:
     config:
       discovery:
