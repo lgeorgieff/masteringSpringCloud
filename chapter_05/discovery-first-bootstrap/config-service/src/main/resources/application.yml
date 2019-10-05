@@ -1,6 +1,7 @@
 spring:
   application:
     name: config-service
+
   cloud:
     config:
       server:
@@ -8,11 +9,27 @@ spring:
           uri: https://github.com/lgeorgieff/masteringSpringCloud.git
           search-paths:
             - chapter_05/config-repo
+      monitor:
+        github:
+          enabled: true
+
+  rabbitmq:
+    host: localhost
+    port: 5672
+    username: guest
+    password: guest
 
   security:
     user:
       name: discovery
       password: discovery
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include:
+          - bus-refresh
 
 eureka:
   client:
