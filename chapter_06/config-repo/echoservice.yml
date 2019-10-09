@@ -1,2 +1,5 @@
 echoService:
   usePrefix: true
+
+server:
+  port: 8092

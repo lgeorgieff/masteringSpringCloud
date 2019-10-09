@@ -11,3 +11,6 @@ prefixService:
       - pref7
       - pref8
       - pref9
+
+server:
+  port: 8091
