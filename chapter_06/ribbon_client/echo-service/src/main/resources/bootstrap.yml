@@ -1,0 +1,20 @@
+spring:
+  application:
+    name: echoservice
+  security:
+    user:
+      password: echo
+      name: echo
+  cloud:
+    config:
+      discovery:
+        enabled: true
+        service-id: configservice
+      password: config
+      username: config
+      failFast: true
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: ${EUREKA_URL:http://eureka:eureka@localhost:8761/eureka/}
