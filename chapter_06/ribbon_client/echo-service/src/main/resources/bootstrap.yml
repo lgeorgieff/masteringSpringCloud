@@ -1,10 +1,6 @@
 spring:
   application:
     name: echoservice
-  security:
-    user:
-      password: echo
-      name: echo
   cloud:
     config:
       discovery:
@@ -18,3 +14,12 @@ eureka:
   client:
     serviceUrl:
       defaultZone: ${EUREKA_URL:http://eureka:eureka@localhost:8761/eureka/}
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include:
+          - refresh
+          - health
+          - info

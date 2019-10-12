@@ -9,12 +9,19 @@ spring:
       name: config
       password: config
   cloud:
+    bus:
+      enabled: true
     config:
       server:
         git:
           uri: https://github.com/lgeorgieff/masteringSpringCloud.git
           searchPaths:
             - chapter_06/config-repo
+  rabbitmq:
+    host: localhost
+    port: 5672
+    username: guest
+    password: guest
 
 eureka:
   client:
@@ -25,4 +32,5 @@ management:
   endpoints:
     web:
       exposure:
-        include: refresh
+        include:
+          - bus-refresh

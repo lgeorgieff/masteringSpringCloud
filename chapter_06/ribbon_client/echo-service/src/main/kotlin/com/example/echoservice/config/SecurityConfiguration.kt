@@ -1,4 +1,4 @@
-package com.example.prefixservice.config
+package com.example.echoservice.config
 
 import org.springframework.context.annotation.Bean
 import org.springframework.security.config.annotation.web.reactive.EnableWebFluxSecurity
@@ -8,7 +8,7 @@ import org.springframework.security.core.userdetails.User
 import org.springframework.security.web.server.SecurityWebFilterChain
 
 @EnableWebFluxSecurity
-class SecurityConfig {
+class SecurityConfiguration {
     @Bean
     fun securityWebFilterChain(http: ServerHttpSecurity): SecurityWebFilterChain {
         return http
@@ -22,8 +22,8 @@ class SecurityConfig {
     @Bean
     fun userDetailsService(): MapReactiveUserDetailsService {
         val user = User
-            .withUsername("prefix")
-            .password("{noop}prefix")
+            .withUsername("echo")
+            .password("{noop}echo")
             .roles("USER")
             .build()
         return MapReactiveUserDetailsService(user)
