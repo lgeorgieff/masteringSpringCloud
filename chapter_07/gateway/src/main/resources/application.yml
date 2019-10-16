@@ -1,0 +1,21 @@
+server:
+  port: ${PORT:8999}
+
+spring:
+  cloud:
+    gateway:
+      routes:
+        - id: echo_1
+          uri: http://localhost:8081
+          predicates:
+            - Method=GET
+            - Path=/echo/1/{message}
+          filters:
+            - RewritePath=/echo/1/(?<message>), /echo/$\{message}
+        - id: echo_2
+          uri: http://localhost:8082
+          predicates:
+            - Method=GET
+            - Path=/echo/2/**
+          filters:
+            - RewritePath=/echo/2/(?<message>), /echo/$\{message}
