@@ -1,4 +1,4 @@
-package com.example.echoservice1
+package com.example.echoservice
 
 import org.springframework.boot.autoconfigure.SpringBootApplication
 import org.springframework.boot.runApplication

@@ -1,4 +1,4 @@
-package com.example.echoservice1.configuration
+package com.example.echoservice.configuration
 
 import org.springframework.boot.context.properties.ConfigurationProperties
 import org.springframework.context.annotation.Configuration

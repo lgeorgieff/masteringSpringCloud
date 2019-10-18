@@ -1,7 +1,7 @@
-package com.example.echoservice1.controller
+package com.example.echoservice.controller
 
-import com.example.echoservice1.configuration.EchoServiceConfiguration
-import com.example.echoservice1.domain.SimpleMessage
+import com.example.echoservice.configuration.EchoServiceConfiguration
+import com.example.echoservice.domain.SimpleMessage
 import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.http.MediaType
 import org.springframework.web.bind.annotation.GetMapping

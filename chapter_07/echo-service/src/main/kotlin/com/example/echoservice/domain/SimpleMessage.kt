@@ -1,3 +1,3 @@
-package com.example.echoservice1.domain
+package com.example.echoservice.domain
 
 data class SimpleMessage<T>(val value: T)
