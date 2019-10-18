@@ -1,1 +1,0 @@
-rootProject.name = "echo-service-2"

@@ -1,5 +1,29 @@
+---
+spring:
+  profiles: inst-1
+
 echoService:
   prefix: echo-1
 
 server:
   port: ${PORT:8081}
+
+---
+spring:
+  profiles: inst-2
+
+echoService:
+  prefix: echo-2
+
+server:
+  port: ${PORT:8082}
+
+---
+spring:
+  profiles: inst-3
+
+echoService:
+  prefix: echo-3
+
+server:
+  port: ${PORT:8083}
