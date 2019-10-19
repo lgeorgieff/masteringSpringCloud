@@ -11,7 +11,7 @@ class EchoRoutes {
         .route("echo-service-3") { r ->
             r.path("/echo/3/{message}")
                 .filters { it.rewritePath("/echo/3/(?<message>)", "/echo/\${message}") }
-                .uri("http://localhost:8083")
+                .uri("lb://echo-service-3")
         }
         .build()
 }

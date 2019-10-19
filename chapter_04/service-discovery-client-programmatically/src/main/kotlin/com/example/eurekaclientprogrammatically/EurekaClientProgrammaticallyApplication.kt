@@ -7,5 +7,5 @@ import org.springframework.boot.runApplication
 class EurekaClientProgrammaticallyApplication
 
 fun main(args: Array<String>) {
-	runApplication<EurekaClientProgrammaticallyApplication>(*args)
+    runApplication<EurekaClientProgrammaticallyApplication>(*args)
 }

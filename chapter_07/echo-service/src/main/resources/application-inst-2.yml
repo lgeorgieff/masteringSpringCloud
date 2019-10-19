@@ -1,0 +1,10 @@
+spring:
+  profiles: inst-2
+  application:
+    name: echo-service-2
+
+echoService:
+  prefix: echo-2
+
+server:
+  port: ${PORT:8082}

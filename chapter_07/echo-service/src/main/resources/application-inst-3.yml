@@ -1,0 +1,10 @@
+spring:
+  profiles: inst-3
+  application:
+    name: echo-service-3
+
+echoService:
+  prefix: echo-3
+
+server:
+  port: ${PORT:8083}
