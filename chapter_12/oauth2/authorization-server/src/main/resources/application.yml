@@ -1,0 +1,23 @@
+# curl auth-server:123456@localhost:8080/oauth/token -d grant_type=password -d username=lukas -d password=123456
+# firefox localhost:8080/oauth/authorize?response_type=token&client_id=auth-server&redirect_uri=http://example.com&scope=read
+
+spring:
+  application:
+    name: auth-server
+  security:
+    user:
+      name: lukas
+      password: 123456
+
+server:
+  port: ${PORT:8080}
+
+security:
+  oauth2:
+    client:
+      client-id: auth-server
+      client-secret: 123456
+      registered-redirect-uri:
+        - http://example.com
+      scope:
+        - read
